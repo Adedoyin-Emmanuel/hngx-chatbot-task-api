@@ -4,11 +4,14 @@ dotenv.config();
 
 import bodyParser from "body-parser";
 import express from "express";
+import cors from "cors";
 import { errorHandler, notFound, rateLimiter } from "./middlewares/index.js";
 import { chatRouter } from "./routes/index.js";
 const app = express();
 const PORT = process.env.PORT || 2800;
 
+
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
