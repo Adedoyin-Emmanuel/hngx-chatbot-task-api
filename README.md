@@ -2,6 +2,10 @@
 
 This is the bot API for the hngx chatbot task
 
+# Tests
+
+As much as I would've love to write unit tests and integration tests, I can't because I've to submit this night 😥 I would write unit tests and integration tests for the **Chrome Extension API**
+
 ## Endpoints
 
 There is basically 1 endpoint
