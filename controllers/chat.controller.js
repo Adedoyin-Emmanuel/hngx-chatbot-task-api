@@ -1,6 +1,6 @@
 import Joi from "joi";
-import { Configuration, OpenAIApi } from "openai";
-import { response } from "./../utils";
+import OpenAI from "openai";
+import { response } from "./../utils/index.js";
 
 class ChatController {
   static async replyChat(req, res) {
@@ -13,20 +13,16 @@ class ChatController {
 
     const { message } = value;
 
-    const configuration = new Configuration({
+    const openai = new OpenAI({
       apiKey: process.env.OPEN_AI_API_KEY,
     });
 
-    const openai = new OpenAIApi(configuration);
-
-    const reply = await openai.createCompletion({
-      n: 1,
-      max_tokens: 580,
-      prompt: message,
-      model: "text-davinci-003",
+    const chatCompletion = await openai.chat.completions.create({
+      messages: [{ role: "user", content: message }],
+      model: "gpt-3.5-turbo",
     });
 
-    const chatbotMessage = reply.data.choices[0].text;
+    const chatbotMessage = chatCompletion.choices[0].message.content;
     return response(res, 200, "Chat retrieved successfully", {
       message: message,
       chatbot: chatbotMessage,
@@ -34,6 +30,4 @@ class ChatController {
   }
 }
 
-module.exports = {
-  ChatController,
-};
+export { ChatController };

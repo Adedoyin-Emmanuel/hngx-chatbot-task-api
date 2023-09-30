@@ -1,4 +1,4 @@
-import { response } from "./../utils";
+import { response } from "./../utils/index.js";
 
 const errorHandler = (err, req, res, next) => {
   console.log(err);

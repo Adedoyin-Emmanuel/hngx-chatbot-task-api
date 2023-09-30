@@ -4,8 +4,8 @@ dotenv.config();
 
 import bodyParser from "body-parser";
 import express from "express";
-import { errorHandler, notFound, rateLimiter } from "./middlewares";
-import { chatRouter } from "./routes";
+import { errorHandler, notFound, rateLimiter } from "./middlewares/index.js";
+import { chatRouter } from "./routes/index.js";
 const app = express();
 const PORT = process.env.PORT || 2800;
 

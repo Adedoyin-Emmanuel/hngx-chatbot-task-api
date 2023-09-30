@@ -1,5 +1,5 @@
-import response from "./response";
+import {response} from "./response.js";
 
-module.exports = {
+export  {
   response,
 };

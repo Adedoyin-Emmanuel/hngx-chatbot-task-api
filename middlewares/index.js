@@ -1,5 +1,5 @@
-import { errorHandler } from "./error";
-import { notFound } from "./notFound";
-import { rateLimiter } from "./rateLimiter";
+import { errorHandler } from "./error.js";
+import { notFound } from "./notFound.js";
+import { rateLimiter } from "./rateLimiter.js";
 
 export { errorHandler, notFound, rateLimiter };
