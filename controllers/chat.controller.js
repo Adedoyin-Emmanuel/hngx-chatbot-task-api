@@ -1,5 +1,6 @@
 const Joi = require("joi");
 const { response } = require("./../utils");
+const axios = require("axios");
 
 class ChatController {
   static async replyChat(req, res) {
