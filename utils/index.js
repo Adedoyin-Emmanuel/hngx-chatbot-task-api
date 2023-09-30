@@ -1,4 +1,4 @@
-const response = require("./response");
+import response from "./response";
 
 module.exports = {
   response,

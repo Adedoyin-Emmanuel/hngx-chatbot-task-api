@@ -1,9 +1,5 @@
-const { rateLimiter } = require("./rateLimiter");
-const { errorHandler } = require("./error");
-const { notFound } = require("./notFound");
+import { errorHandler } from "./error";
+import { notFound } from "./notFound";
+import { rateLimiter } from "./rateLimiter";
 
-module.exports = {
-  rateLimiter,
-  errorHandler,
-  notFound,
-};
+export { errorHandler, notFound, rateLimiter };

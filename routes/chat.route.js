@@ -1,14 +1,7 @@
-const express = require('express');
+import express from "express";
+import { ChatController } from "./../controllers";
 const chatRouter = express.Router();
-const {ChatController} = require("./../controllers");
-
-
 
 chatRouter.get("/", ChatController.replyChat);
 
-
-module.exports = {
-    chatRouter,
-}
-
-
+export { chatRouter };

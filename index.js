@@ -1,11 +1,13 @@
-require("express-async-errors");
-require("dotenv").config();
-const express = require("express");
-const bodyParser = require("body-parser");
+import dotenv from "dotenv";
+import "express-async-errors";
+dotenv.config();
+
+import bodyParser from "body-parser";
+import express from "express";
+import { errorHandler, notFound, rateLimiter } from "./middlewares";
+import { chatRouter } from "./routes";
 const app = express();
 const PORT = process.env.PORT || 2800;
-const { rateLimiter, notFound, errorHandler } = require("./middlewares");
-const { chatRouter } = require("./routes");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

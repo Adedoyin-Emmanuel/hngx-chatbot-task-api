@@ -1,5 +1,5 @@
-const { ChatController } = require("./chat.controller");
+import { ChatController } from "./chat.controller";
 
-module.exports = {
+export  {
   ChatController,
 };

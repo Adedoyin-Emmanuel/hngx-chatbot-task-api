@@ -1,5 +1,6 @@
-const { chatRouter } = require("./chat.route");
+import { chatRouter } from ("./chat.route");
 
-module.exports = {
-  chatRouter,
+export {
+  chatRouter
 };
+

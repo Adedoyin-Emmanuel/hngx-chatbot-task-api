@@ -1,10 +1,8 @@
-const { response } = require("./../utils");
+import { response } from "./../utils";
 
 const errorHandler = (err, req, res, next) => {
   console.log(err);
   return response(res, 500, "Something went wrong, please try again later!");
 };
 
-module.exports = {
-  errorHandler,
-};
+export { errorHandler };
