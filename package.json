@@ -23,6 +23,9 @@
     "joi": "^17.10.2",
     "openai": "^4.11.0"
   },
+  "engines": {
+    "node": "18.18.0"
+  },
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
