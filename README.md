@@ -8,7 +8,7 @@ There is basically 1 endpoint
 
 **Method `GET`**
 **Body**
-`{message: "What is programming}`
+`{message: "What is programming"}`
 
 **Response**
 
