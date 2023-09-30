@@ -51,3 +51,18 @@ There is basically 1 endpoint
   "data": {}
 }
 ```
+
+
+## Frontend App
+Of course what's a backend API without frontend, I built the frontend with **React, Tailwindcss and Axios**
+
+
+## Images
+
+**Home Page**
+![Image 2](./assets/img-2.png)
+
+**Chat Page**
+![Image 1](./assets/img-1.png)
+
+[Backend API](https://github.com/Adedoyin-Emmanuel/hngx-chatbot-task-api)
